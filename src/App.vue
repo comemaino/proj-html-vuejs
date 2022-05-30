@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <header>
+      <AppHeader />
+    </header>
+    <main>
+      <AppServices />
+      <AppCompany />
+      <AppProjects />
+      <AppResults />
+      <AppCta />
+    </main>
+    <footer>
+      <AppFooter />
+    </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import AppHeader from "./components/AppHeader.vue";
+import AppServices from "./components/AppServices.vue";
+import AppCompany from "./components/AppCompany.vue";
+import AppProjects from "./components/AppProjects.vue";
+import AppResults from "./components/AppResults.vue";
+import AppCta from "./components/AppCta.vue";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    AppHeader,
+    AppServices,
+    AppCompany,
+    AppProjects,
+    AppResults,
+    AppCta,
+    AppFooter,
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./style/common.scss";
+@import "./style/variables.scss";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 </style>
