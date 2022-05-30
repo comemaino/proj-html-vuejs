@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <AppHeader />
+      <AppHeader :navItems="navItems" />
     </header>
     <main>
       <AppServices />
@@ -35,6 +35,19 @@ export default {
     AppResults,
     AppCta,
     AppFooter,
+  },
+
+  data() {
+    return {
+      navItems: [
+        { name: "home", target: "#home" },
+        { name: "services", target: "#services" },
+        { name: "about", target: "#about" },
+        { name: "projects", target: "#projects" },
+        { name: "results", target: "#results" },
+        { name: "get in touch", target: "#get-in-touch" },
+      ],
+    };
   },
 };
 </script>
