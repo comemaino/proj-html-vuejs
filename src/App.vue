@@ -4,7 +4,7 @@
       <AppHeader :navItems="navItems" />
     </header>
     <main>
-      <AppServices />
+      <AppServices :services="services" />
       <AppCompany />
       <AppProjects />
       <AppResults />
@@ -46,6 +46,39 @@ export default {
         { name: "projects", target: "#projects" },
         { name: "results", target: "#results" },
         { name: "get in touch", target: "#get-in-touch" },
+      ],
+
+      services: [
+        {
+          iconClass: "fas fa-network-wired",
+          title: "Audit & Assurance",
+          text: "lorem ipsum dolor bla bla bla",
+        },
+        {
+          iconClass: "fas fa-briefcase",
+          title: "Financial Advisory",
+          text: "lorem ipsum dolor bla bla bla",
+        },
+        {
+          iconClass: "fas fa-chart-bar",
+          title: "Analytics and M&A",
+          text: "lorem ipsum dolor bla bla bla",
+        },
+        {
+          iconClass: "fas fa-plane",
+          title: "Middle Marketing",
+          text: "lorem ipsum dolor bla bla bla",
+        },
+        {
+          iconClass: "fas fa-globe",
+          title: "Legal Consulting",
+          text: "lorem ipsum dolor bla bla bla",
+        },
+        {
+          iconClass: "fas fa-folder-open",
+          title: "Regulatory Risk",
+          text: "lorem ipsum dolor bla bla bla",
+        },
       ],
     };
   },
