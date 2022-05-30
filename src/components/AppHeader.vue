@@ -3,12 +3,12 @@
     <!-- HEADER -->
     <div class="top-bar">
       <div class="container">
-        <div class="row row-cols-2">
-          <div class="col">
+        <div class="row">
+          <div class="col-4">
             <i class="fas fa-clock"></i>
             Open Hours: Mon - Sat - 9:00 - 18:00
           </div>
-          <div class="col">
+          <div class="col-8 justify-content-end text-end">
             <div class="row row-cols-3">
               <div class="col">
                 <i class="fas fa-phone-alt"></i>
@@ -19,9 +19,9 @@
                 hello@example.com
               </div>
               <div class="col incons">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-facebook-f p-2"></i>
+                <i class="fab fa-twitter p-2"></i>
+                <i class="fab fa-linkedin-in p-2"></i>
               </div>
             </div>
           </div>
@@ -33,11 +33,11 @@
     <div class="jumbotron">
       <div class="container h-100">
         <nav>
-          <div class="row row-cols-2">
-            <div class="col">
+          <div class="row">
+            <div class="col-4">
               <img src="../assets/img/logo.png" alt="" class="logo" />
             </div>
-            <div class="col">
+            <div class="col-8 text-end">
               <ul class="nav-links">
                 <li
                   v-for="(navItem, index) in navItems"

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="card mt-4 p-4">
-      <div class="row row-cols-2 icon-wrapper">
+      <div class="row row-cols-2 icon-wrapper mb-3">
         <i class="main-icon" :class="serviceCard.iconClass"></i>
         <i class="fas fa-arrow-right text-end"></i>
       </div>

@@ -5,7 +5,7 @@
     </header>
     <main>
       <AppServices :services="services" />
-      <AppCompany />
+      <AppCompany :aboutItems="aboutItems" />
       <AppProjects />
       <AppResults />
       <AppCta />
@@ -78,6 +78,29 @@ export default {
           iconClass: "fas fa-folder-open",
           title: "Regulatory Risk",
           text: "lorem ipsum dolor bla bla bla",
+        },
+      ],
+
+      aboutItems: [
+        {
+          iconClass: "fas fa-medal",
+          title: "Tradition",
+          text: "Lorem ipsum dolor bla bla bla bla",
+        },
+        {
+          iconClass: "fas fa-lock",
+          title: "Security",
+          text: "Lorem ipsum dolor bla bla bla bla",
+        },
+        {
+          iconClass: "far fa-edit",
+          title: "Certificate",
+          text: "Lorem ipsum dolor bla bla bla bla",
+        },
+        {
+          iconClass: "fas fa-graduation-cap",
+          title: "Expertise",
+          text: "Lorem ipsum dolor bla bla bla bla",
         },
       ],
     };
