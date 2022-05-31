@@ -11,7 +11,11 @@
       <AppCta :contacts="contacts" />
     </main>
     <footer>
-      <AppFooter />
+      <AppFooter
+        :contacts="contacts"
+        :footerLinks="footerLinks"
+        :contentList="contentList"
+      />
     </footer>
   </div>
 </template>
@@ -223,6 +227,98 @@ export default {
         {
           imgUrlId: "3",
           imgAlt: "pingdom-logo",
+        },
+      ],
+
+      footerLinks: [
+        {
+          name: "about",
+          contentList: [
+            {
+              title: "the company",
+              href: "",
+            },
+            {
+              title: "institutional",
+              href: "",
+            },
+            {
+              title: "social & events",
+              href: "",
+            },
+            {
+              title: "innovation",
+              href: "",
+            },
+            {
+              title: "environment",
+              href: "",
+            },
+            {
+              title: "technology",
+              href: "",
+            },
+          ],
+        },
+
+        {
+          name: "services",
+          contentList: [
+            {
+              title: "audit & assurance",
+              href: "",
+            },
+            {
+              title: "financial advisory",
+              href: "",
+            },
+            {
+              title: "analytics M&A",
+              href: "",
+            },
+            {
+              title: "middle marketing",
+              href: "",
+            },
+            {
+              title: "legal consulting",
+              href: "",
+            },
+            {
+              title: "regulatory risk",
+              href: "",
+            },
+          ],
+        },
+
+        {
+          name: "support",
+          contentList: [
+            {
+              title: "responsability",
+              href: "",
+            },
+            {
+              title: "terms of use",
+              href: "",
+            },
+            {
+              title: "about cookies",
+              href: "",
+            },
+            {
+              title: "privacy policy",
+              href: "",
+            },
+            {
+              title: "accessibility",
+              href: "",
+            },
+            {
+              title: "information",
+              href: "",
+            },
+          ],
         },
       ],
     };

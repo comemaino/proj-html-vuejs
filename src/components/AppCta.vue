@@ -59,7 +59,9 @@
             <h3>Example Inc</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
-              quod ex iste soluta at autem nihil. <br />
+              quod ex iste soluta at autem nihil.
+            </p>
+            <p>
               Odit fugiat est iusto eaque, consequatur eum inventore veritatis
               assumenda quae nisi, nesciunt sunt!
             </p>
