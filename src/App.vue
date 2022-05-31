@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <header>
-      <AppHeader :navItems="navItems" />
+      <AppHeader :navItems="headerNavItems" />
     </header>
     <main>
       <AppServices :services="services" />
       <AppCompany :aboutItems="aboutItems" />
-      <AppProjects />
+      <AppProjects :navItems="projectsNavItems" :projects="projects" />
       <AppResults />
       <AppCta />
     </main>
@@ -39,7 +39,8 @@ export default {
 
   data() {
     return {
-      navItems: [
+      // HEADER NAV
+      headerNavItems: [
         { name: "home", target: "#home" },
         { name: "services", target: "#services" },
         { name: "about", target: "#about" },
@@ -47,7 +48,7 @@ export default {
         { name: "results", target: "#results" },
         { name: "get in touch", target: "#get-in-touch" },
       ],
-
+      // SERVICES SECTION
       services: [
         {
           iconClass: "fas fa-network-wired",
@@ -80,7 +81,7 @@ export default {
           text: "lorem ipsum dolor bla bla bla",
         },
       ],
-
+      //COMPANY SECTION
       aboutItems: [
         {
           iconClass: "fas fa-medal",
@@ -101,6 +102,71 @@ export default {
           iconClass: "fas fa-graduation-cap",
           title: "Expertise",
           text: "Lorem ipsum dolor bla bla bla bla",
+        },
+      ],
+      //PROJECTS SECTION
+      //PROJECTS NAV
+      projectsNavItems: [
+        {
+          name: "all",
+          active: true,
+        },
+        {
+          name: "institutional",
+          active: false,
+        },
+        {
+          name: "social",
+          active: false,
+        },
+        {
+          name: "events",
+          active: false,
+        },
+        {
+          name: "innovation",
+          active: false,
+        },
+        {
+          name: "environment",
+          active: false,
+        },
+        {
+          name: "technology",
+          active: false,
+        },
+      ],
+      //PROJECTS CARDS
+      projects: [
+        {
+          imgUrl: "1",
+          title: "Academic professional program in social media",
+          text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
+        },
+        {
+          imgUrl: "2",
+          title: "President speech at the annual meeting",
+          text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
+        },
+        {
+          imgUrl: "3",
+          title: "International business trip to Shanghai",
+          text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
+        },
+        {
+          imgUrl: "4",
+          title: "Technology workshop with education theme",
+          text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
+        },
+        {
+          imgUrl: "5",
+          title: "Donation of clothes and food to partner NGO",
+          text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
+        },
+        {
+          imgUrl: "6",
+          title: "Confraternization of the procurement team",
+          text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
         },
       ],
     };

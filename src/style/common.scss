@@ -1,11 +1,19 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import "./variables.scss";
 
-// COMMON
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 5rem 0;
+}
 
 ul {
   list-style: none;
 }
 
-section {
-  padding: 5rem 0;
+.highlight {
+  padding: 0.1rem 0.8rem;
+  background-color: $brand-secondary-clr;
 }

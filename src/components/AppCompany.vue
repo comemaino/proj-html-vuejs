@@ -46,6 +46,8 @@ export default {
 <style lang="scss" scoped>
 @import "../style/variables.scss";
 #about {
+  position: relative;
+
   color: #555;
   background-color: $dark-section-bg-clr;
   background-image: url(../assets/img/about-4.jpg);
@@ -53,5 +55,27 @@ export default {
 
   background-position: 100% 50%;
   background-repeat: no-repeat;
+
+  &::before,
+  &::after {
+    content: "";
+    background-size: 100%;
+    display: inline-block;
+    width: 8rem;
+    height: 4rem;
+    background-image: url(../assets/img/bullets.png);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 25%;
+  }
+
+  &::before {
+    top: -5%;
+  }
+
+  &::after {
+    bottom: -5%;
+  }
 }
 </style>
