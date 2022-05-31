@@ -10,13 +10,13 @@
           </div>
           <div class="col-8 justify-content-end text-end">
             <div class="row row-cols-3">
-              <div class="col">
-                <i class="fas fa-phone-alt"></i>
-                +1 (305) 1234-5678
-              </div>
-              <div class="col">
-                <i class="fas fa-envelope"></i>
-                hello@example.com
+              <div
+                class="col"
+                v-for="(contact, index) in contacts.slice(0, 2)"
+                :key="index"
+              >
+                <i :class="contact.iconClass"></i>
+                {{ contact.info }}
               </div>
               <div class="col incons">
                 <i class="fab fa-facebook-f p-2"></i>
@@ -39,11 +39,7 @@
             </div>
             <div class="col-8 text-end">
               <ul class="nav-links">
-                <li
-                  v-for="(navItem, index) in navItems"
-                  :key="index"
-                  :navItem="navItem"
-                >
+                <li v-for="(navItem, index) in navItems" :key="index">
                   <a :href="navItem.target">{{ navItem.name }}</a>
                 </li>
               </ul>
@@ -72,6 +68,7 @@ export default {
   name: "AppHeader",
 
   props: {
+    contacts: Array,
     navItems: Array,
   },
 };

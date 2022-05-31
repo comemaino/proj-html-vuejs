@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <header>
-      <AppHeader :navItems="headerNavItems" />
+      <AppHeader :navItems="headerNavItems" :contacts="contacts" />
     </header>
     <main>
       <AppServices :services="services" />
       <AppCompany :aboutItems="aboutItems" />
       <AppProjects :navItems="projectsNavItems" :projects="projects" />
       <AppResults :results="results" :logos="logos" />
-      <AppCta />
+      <AppCta :contacts="contacts" />
     </main>
     <footer>
       <AppFooter />
@@ -39,6 +39,20 @@ export default {
 
   data() {
     return {
+      contacts: [
+        {
+          iconClass: "fas fa-phone-alt",
+          info: "+1 (305) 1234-5678",
+        },
+        {
+          iconClass: "fas fa-envelope",
+          info: "hello@example.com",
+        },
+        {
+          iconClass: "fas fa-map-marker-alt",
+          info: "Main Avenue, 987",
+        },
+      ],
       // HEADER NAV
       headerNavItems: [
         { name: "home", target: "#home" },
