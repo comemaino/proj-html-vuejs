@@ -21,9 +21,6 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  border: 1px solid black;
-  background-color: #fff;
-
   .main-icon {
     display: inline-block;
     font-size: 1.8rem;

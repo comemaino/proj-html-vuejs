@@ -10,7 +10,6 @@
           <li
             v-for="(navItem, index) in navItems"
             :key="index"
-            :navItem="navItem"
             :class="{ highlight: navItem.active }"
           >
             <a href="">{{ navItem.name }}</a>

@@ -7,7 +7,7 @@
       <AppServices :services="services" />
       <AppCompany :aboutItems="aboutItems" />
       <AppProjects :navItems="projectsNavItems" :projects="projects" />
-      <AppResults />
+      <AppResults :results="results" :logos="logos" />
       <AppCta />
     </main>
     <footer>
@@ -139,34 +139,76 @@ export default {
       //PROJECTS CARDS
       projects: [
         {
-          imgUrl: "1",
+          imgUrlId: "1",
           title: "Academic professional program in social media",
           text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
         },
         {
-          imgUrl: "2",
+          imgUrlId: "2",
           title: "President speech at the annual meeting",
           text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
         },
         {
-          imgUrl: "3",
+          imgUrlId: "3",
           title: "International business trip to Shanghai",
           text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
         },
         {
-          imgUrl: "4",
+          imgUrlId: "4",
           title: "Technology workshop with education theme",
           text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
         },
         {
-          imgUrl: "5",
+          imgUrlId: "5",
           title: "Donation of clothes and food to partner NGO",
           text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
         },
         {
-          imgUrl: "6",
+          imgUrlId: "6",
           title: "Confraternization of the procurement team",
           text: "Lorem ipsum ciao ciao bla bla lorem lorem blavblabla",
+        },
+      ],
+
+      results: [
+        {
+          category: "certifications",
+          amount: 128,
+        },
+        {
+          category: "employees",
+          amount: 230,
+        },
+        {
+          category: "costumers",
+          amount: 517,
+        },
+        {
+          category: "countries Served",
+          amount: 94,
+        },
+      ],
+
+      logos: [
+        {
+          imgUrlId: "4",
+          imgAlt: "jquery-logo",
+        },
+        {
+          imgUrlId: "5",
+          imgAlt: "less-logo",
+        },
+        {
+          imgUrlId: "1",
+          imgAlt: "woo-commerce-logo",
+        },
+        {
+          imgUrlId: "2",
+          imgAlt: "wordpress-logo",
+        },
+        {
+          imgUrlId: "3",
+          imgAlt: "pingdom-logo",
         },
       ],
     };
