@@ -1,13 +1,11 @@
 <template>
-  <div class="container">
-    <div class="card mt-4 p-4">
-      <div class="row row-cols-2 icon-wrapper mb-3">
-        <i class="main-icon" :class="serviceCard.iconClass"></i>
-        <i class="fas fa-arrow-right text-end"></i>
-      </div>
-      <h4>{{ serviceCard.title }}</h4>
-      <p>{{ serviceCard.text }}</p>
+  <div class="card col-4 mt-4 p-4">
+    <div class="row row-cols-2 icon-wrapper mb-3">
+      <i class="main-icon" :class="serviceCard.iconClass"></i>
+      <i class="arrow fas fa-arrow-right text-end"></i>
     </div>
+    <h4>{{ serviceCard.title }}</h4>
+    <p>{{ serviceCard.text }}</p>
   </div>
 </template>
 
@@ -21,11 +19,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../style/variables.scss";
+
 .card {
+  width: 32%;
   background-color: #fff;
 
-  .main-icon {
-    font-size: 1.8rem;
+  i {
+    color: $brand-primary-clr;
+
+    &.main-icon {
+      font-size: 1.8rem;
+    }
+
+    &.arrow {
+      opacity: 0.7;
+    }
   }
 }
 </style>

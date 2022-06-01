@@ -8,17 +8,16 @@
             <i class="fas fa-clock"></i>
             Open Hours: Mon - Sat - 9:00 - 18:00
           </div>
-          <div class="col-6">
-            <div class="row justify-content-between text-end">
+          <div class="col-7">
+            <div class="row row-cols-3 justify-content-between text-end">
               <div
-                class="col-4"
                 v-for="(contact, index) in contacts.slice(0, 2)"
                 :key="index"
               >
                 <i :class="contact.iconClass"></i>
                 {{ contact.info }}
               </div>
-              <div class="col-3 incons">
+              <div class="icons">
                 <a href="https://www.facebook.com"
                   ><i class="fab fa-facebook-f px-3"></i
                 ></a>
@@ -93,9 +92,6 @@ export default {
 <style lang="scss" scoped>
 @import "../style/variables.scss";
 
-.col {
-  border: 1px solid red;
-}
 .top-bar {
   padding: 1rem 0;
   color: $light-section-bg-clr;
@@ -136,8 +132,6 @@ export default {
 
   p {
     width: 65%;
-    font-size: 1.1rem;
-    color: $medium-text-clr;
   }
 }
 </style>

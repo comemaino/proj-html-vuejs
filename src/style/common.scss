@@ -7,6 +7,24 @@ a {
   color: inherit;
 }
 
+h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $brand-primary-clr;
+}
+
+p {
+  margin: 1rem 0 2rem;
+  font-size: 1.1rem;
+  color: $medium-text-clr;
+}
+
 section {
   padding: 5rem 0;
 }
@@ -22,6 +40,7 @@ ul {
 }
 
 .container {
+  width: 65%;
   border: 1px solid green;
 }
 

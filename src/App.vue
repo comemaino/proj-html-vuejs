@@ -71,32 +71,32 @@ export default {
         {
           iconClass: "fas fa-network-wired",
           title: "Audit & Assurance",
-          text: "lorem ipsum dolor bla bla bla",
+          text: "lorem ipsum dolor bla bla bla lorem ipsum dolor bla bla bla",
         },
         {
           iconClass: "fas fa-briefcase",
           title: "Financial Advisory",
-          text: "lorem ipsum dolor bla bla bla",
+          text: "lorem ipsum dolor bla bla bla lorem ipsum dolor bla bla bla",
         },
         {
           iconClass: "fas fa-chart-bar",
           title: "Analytics and M&A",
-          text: "lorem ipsum dolor bla bla bla",
+          text: "lorem ipsum dolor bla bla bla lorem ipsum dolor bla bla bla",
         },
         {
           iconClass: "fas fa-plane",
           title: "Middle Marketing",
-          text: "lorem ipsum dolor bla bla bla",
+          text: "lorem ipsum dolor bla bla bla lorem ipsum dolor bla bla bla",
         },
         {
           iconClass: "fas fa-globe",
           title: "Legal Consulting",
-          text: "lorem ipsum dolor bla bla bla",
+          text: "lorem ipsum dolor bla bla bla lorem ipsum dolor bla bla bla",
         },
         {
           iconClass: "fas fa-folder-open",
           title: "Regulatory Risk",
-          text: "lorem ipsum dolor bla bla bla",
+          text: "lorem ipsum dolor bla bla bla lorem ipsum dolor bla bla bla",
         },
       ],
       //COMPANY SECTION
