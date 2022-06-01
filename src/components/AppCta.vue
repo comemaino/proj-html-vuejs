@@ -1,10 +1,12 @@
 <template>
   <section id="get-in-touch" aria-labelledby="section-title">
-    <div class="container">
+    <div class="container p-0">
       <div class="row">
         <div class="col-8">
           <h5>send a message</h5>
-          <h2 id="section-title">Get in<span class="highlight">Touch</span></h2>
+          <h2 id="section-title" class="my-3">
+            Get in <span class="highlight">Touch</span>
+          </h2>
           <p>We will respond as soon as possible.</p>
 
           <form>
@@ -52,25 +54,27 @@
               </div>
             </div>
           </form>
-          <button>send</button>
+          <button class="btn brand-btn mt-4">send</button>
         </div>
         <div class="col-4">
           <div class="text-wrapper">
-            <h3>Example Inc</h3>
+            <h4>Example Inc.</h4>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
-              quod ex iste soluta at autem nihil.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimu
             </p>
             <p>
               Odit fugiat est iusto eaque, consequatur eum inventore veritatis
-              assumenda quae nisi, nesciunt sunt!
             </p>
           </div>
-          <div class="col" v-for="(contact, index) in contacts" :key="index">
-            <i :class="contact.iconClass"></i>
+          <div
+            class="contact mt-3"
+            v-for="(contact, index) in contacts"
+            :key="index"
+          >
+            <i class="text-center" :class="contact.iconClass"></i>
             {{ contact.info }}
           </div>
-          <button class="">view map</button>
+          <button class="btn light-btn mt-3">view map</button>
         </div>
       </div>
     </div>
@@ -88,17 +92,49 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../style/variables.scss";
+
+h2 span {
+  color: $brand-primary-clr;
+}
+
 .form-group {
   position: relative;
   margin-top: 1rem;
 
+  .form-control {
+    border: 0;
+    background-color: $light-section-bg-clr;
+  }
+
   &.case-sensitive::after {
-    content: "\f151";
-    font-family: FontAwesome;
+    content: url(../assets/img/capslock.png);
     position: absolute;
-    right: 1.5rem;
-    bottom: 25%;
+    right: 1.2rem;
+    bottom: 15%;
     z-index: 10;
+  }
+}
+
+h4 {
+  font-weight: 700;
+}
+
+p {
+  color: $medium-text-clr;
+}
+
+.contact {
+  color: $brand-primary-clr;
+
+  i {
+    width: 2.2rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    vertical-align: middle;
+    border-radius: 50%;
+
+    background-color: $brand-secondary-clr;
   }
 }
 </style>
