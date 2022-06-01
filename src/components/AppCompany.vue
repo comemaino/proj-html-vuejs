@@ -1,10 +1,12 @@
 <template>
   <section id="about" aria-labelledby="section-title">
-    <div class="container">
+    <div class="container p-0">
       <div class="row row-cols-2">
         <div class="col">
           <h5>about the network</h5>
-          <h2 id="section-title"><span class="highlight">The</span> Company</h2>
+          <h2 id="section-title" class="my-4">
+            <span class="highlight">The</span> Company
+          </h2>
           <p>
             For 12 years we have been providing audit and warranty, financial
             advice, taxes and related services to select clients.
@@ -17,8 +19,8 @@
             />
           </div>
           <div class="buttons">
-            <button>get in touch</button>
-            <button>read more</button>
+            <button class="btn brand-btn me-3">get in touch</button>
+            <button class="btn alpha-btn">read more</button>
           </div>
         </div>
       </div>
@@ -48,7 +50,7 @@ export default {
 #about {
   position: relative;
 
-  color: #555;
+  color: #fff;
   background-color: $dark-section-bg-clr;
   background-image: url(../assets/img/about-4.jpg);
   background-size: 50%;
@@ -76,6 +78,10 @@ export default {
 
   &::after {
     bottom: -5%;
+  }
+
+  p {
+    color: $light-text-clr;
   }
 }
 </style>
