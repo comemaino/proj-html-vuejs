@@ -1,14 +1,13 @@
 <template>
-  <div class="container">
-    <div class="col card mt-4">
-      <img
-        :src="require('../assets/img/project-' + projectCard.imgUrlId + '.jpg')"
-        :alt="projectCard.title"
-      />
-      <div class="text-wrapper p-2">
-        <h4>{{ projectCard.title }}</h4>
-        <p>{{ projectCard.text }}</p>
-      </div>
+  <div class="col proj-card mt-4">
+    <img
+      class="text-center"
+      :src="require('../assets/img/project-' + projectCard.imgUrlId + '.jpg')"
+      :alt="projectCard.title"
+    />
+    <div class="text-wrapper p-4">
+      <h4>{{ projectCard.title }}</h4>
+      <p>{{ projectCard.text }}</p>
     </div>
   </div>
 </template>
@@ -23,18 +22,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card {
+@import "../style/variables.scss";
+
+.proj-card {
+  position: relative;
+  width: 33%;
+
   & * {
     transition: 200ms;
   }
+
   img {
+    width: 100%;
+    border-radius: 0.5rem;
     filter: brightness(0.4);
   }
 
   .text-wrapper {
     color: #fff;
     position: absolute;
-    bottom: -1rem;
+    bottom: -4rem;
+    z-index: 10;
 
     p {
       opacity: 0;
@@ -45,7 +53,7 @@ export default {
     filter: blur(2px) brightness(0.4);
   }
   &:hover .text-wrapper {
-    bottom: 0;
+    bottom: -2rem;
   }
   &:hover .text-wrapper p {
     opacity: 1;
