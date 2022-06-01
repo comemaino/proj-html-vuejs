@@ -3,25 +3,31 @@
     <!-- HEADER -->
     <div class="top-bar">
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-between">
           <div class="col-4">
             <i class="fas fa-clock"></i>
             Open Hours: Mon - Sat - 9:00 - 18:00
           </div>
-          <div class="col-8 justify-content-end text-end">
-            <div class="row row-cols-3">
+          <div class="col-6">
+            <div class="row justify-content-between text-end">
               <div
-                class="col"
+                class="col-4"
                 v-for="(contact, index) in contacts.slice(0, 2)"
                 :key="index"
               >
                 <i :class="contact.iconClass"></i>
                 {{ contact.info }}
               </div>
-              <div class="col incons">
-                <i class="fab fa-facebook-f p-2"></i>
-                <i class="fab fa-twitter p-2"></i>
-                <i class="fab fa-linkedin-in p-2"></i>
+              <div class="col-3 incons">
+                <a href="https://www.facebook.com"
+                  ><i class="fab fa-facebook-f px-3"></i
+                ></a>
+                <a href="https://www.twitter.com"
+                  ><i class="fab fa-twitter px-3"></i
+                ></a>
+                <a href="https://www.linkedin.com"
+                  ><i class="fab fa-linkedin-in px-3"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -32,6 +38,7 @@
     <!-- JUMBOTRON -->
     <div class="jumbotron">
       <div class="container h-100">
+        <!-- NAV -->
         <nav>
           <div class="row">
             <div class="col-4">
@@ -40,21 +47,30 @@
             <div class="col-8 text-end">
               <ul class="nav-links">
                 <li v-for="(navItem, index) in navItems" :key="index">
-                  <a :href="navItem.target">{{ navItem.name }}</a>
+                  <a
+                    :href="navItem.target"
+                    :class="{ 'btn brand-btn': index === navItems.length - 1 }"
+                    >{{ navItem.name }}
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
+        <!-- /NAV -->
         <div class="row h-100 justify-content-center align-items-center">
-          <div class="jumbo-content w-50 text-center">
+          <div
+            class="jumbo-content w-50 text-center d-flex flex-column align-items-center"
+          >
             <h1>ready <span class="highlight">team</span></h1>
             <p>
               No matter what your company needs, we will be ready to assist you
               in the best possible way.
             </p>
-            <button>get in touch</button>
-            <button>read more</button>
+            <div class="btn-wrapper">
+              <button class="btn brand-btn">get in touch</button>
+              <button class="btn light-btn ms-4">read more</button>
+            </div>
           </div>
         </div>
       </div>
@@ -75,20 +91,53 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../style/variables.scss";
+
+.col {
+  border: 1px solid red;
+}
+.top-bar {
+  padding: 1rem 0;
+  color: $light-section-bg-clr;
+  background-color: $header-bg-clr;
+}
+
 .jumbotron {
   padding: 1rem;
   height: 50rem;
-  background-image: url(../assets/img/bg-parallax.png);
+  background-image: url(../assets/img/bg-parallax.png),
+    url(../assets/img/jumbo-bg.png);
+
   background-size: auto;
   background-position: center;
 
   .logo {
-    width: 10rem;
+    width: 8rem;
   }
 
   li {
     display: inline-block;
-    padding: 0 1rem;
+
+    a {
+      padding: 0.5rem 1.25rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: capitalize;
+
+    span {
+      color: $brand-primary-clr;
+    }
+  }
+
+  p {
+    width: 65%;
+    font-size: 1.1rem;
+    color: $medium-text-clr;
   }
 }
 </style>

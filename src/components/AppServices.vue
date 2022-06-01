@@ -48,6 +48,6 @@ export default {
 <style lang="scss" scoped>
 @import "../style/variables.scss";
 #services {
-  background-color: $clear-section-bg-clr;
+  background-color: $light-section-bg-clr;
 }
 </style>
