@@ -202,7 +202,7 @@ export default {
           amount: 517,
         },
         {
-          category: "countries Served",
+          category: "countries served",
           amount: 94,
         },
       ],

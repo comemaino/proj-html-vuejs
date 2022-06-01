@@ -2,15 +2,15 @@
   <section id="results" aria-labelledby="section-title">
     <div class="top-section py-5">
       <div class="container text-center">
-        <h5 class="pt-5">what are we doing</h5>
+        <h5 class="pt-5 mb-4">what are we doing</h5>
         <h2 id="section-title">
-          <span class="highlight">Results</span>in Numbers
+          <span class="highlight">Results</span> in Numbers
         </h2>
 
         <div class="row row-cols-4 py-5">
           <div class="py-5" v-for="(result, index) in results" :key="index">
             <h3>{{ result.amount }}</h3>
-            <h5>{{ result.category }}</h5>
+            <h6>{{ result.category }}</h6>
           </div>
         </div>
       </div>
@@ -48,6 +48,17 @@ export default {
 
   background-image: url(../assets/img/bg-7.jpg);
   background-position: 0 50%;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $brand-primary-clr;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
 }
 
 .bottom-section {
