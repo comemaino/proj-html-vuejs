@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- TOP FOOTER -->
     <section class="top-section">
       <div class="container">
         <div class="row row-cols-4 justify-content-between">
@@ -12,6 +13,7 @@
             </div>
             <button class="btn alpha-btn">get in touch</button>
           </div>
+          <!-- CARDS -->
           <div
             v-for="(item, index) in footerLinks"
             :key="index"
@@ -19,8 +21,9 @@
           >
             <h4 class="mb-3">{{ item.name }}</h4>
             <ul>
+              <!-- LINK LISTS -->
               <li
-                v-for="(item, index) in item.contentList"
+                v-for="(item, index) in item.linksList"
                 :key="index"
                 class="mt-2"
               >
@@ -32,7 +35,8 @@
         </div>
       </div>
     </section>
-
+    <!-- /TOP FOOTER -->
+    <!-- BOTTOM FOOTER -->
     <div class="bottom-section py-4">
       <div class="container">
         <div class="row row-cols-2">
@@ -45,6 +49,7 @@
       </div>
     </div>
   </div>
+  <!-- /BOTTOM-FOOTER -->
 </template>
 
 <script>
@@ -55,7 +60,7 @@ export default {
     contacts: Array,
     footerLinks: Array,
     footerLink: Object,
-    contentList: Array,
+    linksList: Array,
   },
 };
 </script>

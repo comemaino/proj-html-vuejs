@@ -14,18 +14,17 @@
                 v-for="(contact, index) in contacts.slice(0, 2)"
                 :key="index"
               >
-                <i :class="contact.iconClass"></i>
-                {{ contact.info }}
+                <a href=""
+                  ><i :class="contact.iconClass" class="me-2"></i
+                  >{{ contact.info }}</a
+                >
               </div>
               <div class="icons">
-                <a href="https://www.facebook.com"
-                  ><i class="fab fa-facebook-f px-3"></i
-                ></a>
-                <a href="https://www.twitter.com"
-                  ><i class="fab fa-twitter px-3"></i
-                ></a>
-                <a href="https://www.linkedin.com"
-                  ><i class="fab fa-linkedin-in px-3"></i
+                <a
+                  v-for="(item, index) in socialMedia"
+                  :key="index"
+                  :href="item.link"
+                  ><i :class="item.iconClass" class="px-3"></i
                 ></a>
               </div>
             </div>
@@ -62,12 +61,14 @@
             class="jumbo-content w-50 text-center d-flex flex-column align-items-center"
           >
             <h1>ready <span class="highlight">team</span></h1>
-            <p>
+            <p class="my-4">
               No matter what your company needs, we will be ready to assist you
               in the best possible way.
             </p>
             <div class="btn-wrapper">
-              <button class="btn brand-btn">get in touch</button>
+              <button class="btn brand-btn">
+                <a href="#get-in-touch">get in touch</a>
+              </button>
               <button class="btn light-btn ms-4">read more</button>
             </div>
           </div>
@@ -85,12 +86,17 @@ export default {
   props: {
     contacts: Array,
     navItems: Array,
+    socialMedia: Array,
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../style/variables.scss";
+
+a:hover {
+  color: $brand-primary-clr;
+}
 
 .top-bar {
   padding: 1rem 0;

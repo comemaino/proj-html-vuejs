@@ -1,16 +1,17 @@
 <template>
-  <section id="get-in-touch" aria-labelledby="section-title">
+  <section id="get-in-touch" aria-labelledby="cta-section-title">
     <div class="container p-0">
       <div class="row">
         <div class="col-8">
           <h5>send a message</h5>
-          <h2 id="section-title" class="my-3">
+          <h2 id="cta-section-title" class="my-3">
             Get in <span class="highlight">Touch</span>
           </h2>
           <p>We will respond as soon as possible.</p>
-
+          <!-- FORM -->
           <form>
             <div class="row row-cols-2">
+              <!-- NAME -->
               <div class="form-group case-sensitive">
                 <input
                   type="name"
@@ -19,6 +20,7 @@
                   placeholder="Name"
                 />
               </div>
+              <!-- EMAIL -->
               <div class="form-group case-sensitive">
                 <input
                   type="email"
@@ -27,6 +29,7 @@
                   placeholder="Email"
                 />
               </div>
+              <!-- PHONE -->
               <div class="form-group">
                 <input
                   type="phone"
@@ -35,6 +38,7 @@
                   placeholder="Phone"
                 />
               </div>
+              <!-- MORE INFO -->
               <div class="form-group">
                 <input
                   type="info"
@@ -43,7 +47,7 @@
                   placeholder="More Info"
                 />
               </div>
-
+              <!-- MESSAGE -->
               <div class="flex-grow-1 form-group">
                 <textarea
                   class="form-control"
@@ -56,6 +60,8 @@
           </form>
           <button class="btn brand-btn mt-4">send</button>
         </div>
+        <!-- /FORM -->
+        <!-- CONTACTS -->
         <div class="col-4">
           <div class="text-wrapper">
             <h4>Example Inc.</h4>
@@ -76,6 +82,7 @@
           </div>
           <button class="btn light-btn mt-3">view map</button>
         </div>
+        <!-- /CONTACTS -->
       </div>
     </div>
   </section>
@@ -88,6 +95,17 @@ export default {
   props: {
     contacts: Array,
   },
+
+  // computed: {
+  //   capsLockListener(event) {
+  //     let capsLock = "";
+  //     if (event.getModifierState("CapsLock")) {
+  //       capsLock = true;
+  //     }
+  //     console.log(capsLock);
+  //     return capsLock;
+  //   },
+  // },
 };
 </script>
 
@@ -105,6 +123,10 @@ h2 span {
   .form-control {
     border: 0;
     background-color: $light-section-bg-clr;
+
+    &:focus {
+      outline: 0.3rem solid $brand-primary-clr;
+    }
   }
 
   &.case-sensitive::after {

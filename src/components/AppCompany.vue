@@ -1,10 +1,10 @@
 <template>
-  <section id="about" aria-labelledby="section-title">
+  <section id="about" aria-labelledby="company-section-title">
     <div class="container p-0">
       <div class="row row-cols-2">
         <div class="col">
           <h5>about the network</h5>
-          <h2 id="section-title" class="my-4">
+          <h2 id="company-section-title" class="my-4">
             <span class="highlight">The</span> Company
           </h2>
           <p>

@@ -1,12 +1,12 @@
 <template>
-  <section id="results" aria-labelledby="section-title">
+  <section id="results" aria-labelledby="results-section-title">
     <div class="top-section py-5">
       <div class="container text-center">
         <h5 class="pt-5 mb-4">what are we doing</h5>
-        <h2 id="section-title">
+        <h2 id="results-section-title">
           <span class="highlight">Results</span> in Numbers
         </h2>
-
+        <!-- RESULTS IN NUMBERS -->
         <div class="row row-cols-4 py-5">
           <div class="py-5" v-for="(result, index) in results" :key="index">
             <h3>{{ result.amount }}</h3>
@@ -15,6 +15,7 @@
         </div>
       </div>
     </div>
+    <!-- TECHNOLOGIES -->
     <div class="bottom-section py-5">
       <div class="container text-center py-5">
         <div class="row row-cols-5">

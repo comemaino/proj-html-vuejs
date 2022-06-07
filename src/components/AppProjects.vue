@@ -1,8 +1,8 @@
 <template>
-  <section id="projects" aria-labelledby="section-title">
+  <section id="projects" aria-labelledby="projects-section-title">
     <div class="container text-center p-0">
       <h5>we do for everyone</h5>
-      <h2 id="section-title" class="mt-4">
+      <h2 id="projects-section-title" class="mt-4">
         Actions & <span class="highlight">Projects</span>
       </h2>
       <nav>

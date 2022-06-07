@@ -1,10 +1,10 @@
 <template>
-  <section id="services" aria-labelledby="section-title">
+  <section id="services" aria-labelledby="services-section-title">
     <div class="container">
       <div class="row justify-content-between align-items-end">
         <div class="col-9 p-0">
           <h5>our business area</h5>
-          <h2 id="section-title">
+          <h2 id="services-section-title">
             Excellence in <span class="highlight">Services</span>
           </h2>
 

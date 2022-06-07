@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <header>
-      <AppHeader :navItems="headerNavItems" :contacts="contacts" />
+      <AppHeader
+        :navItems="headerNavItems"
+        :contacts="contacts"
+        :socialMedia="socialMedia"
+      />
     </header>
     <main>
       <AppServices :services="services" />
@@ -14,7 +18,7 @@
       <AppFooter
         :contacts="contacts"
         :footerLinks="footerLinks"
-        :contentList="contentList"
+        :linksList="footerLinks.linksList"
       />
     </footer>
   </div>
@@ -43,6 +47,7 @@ export default {
 
   data() {
     return {
+      // CONTACTS
       contacts: [
         {
           iconClass: "fas fa-phone-alt",
@@ -55,6 +60,21 @@ export default {
         {
           iconClass: "fas fa-map-marker-alt",
           info: "Main Avenue, 987",
+        },
+      ],
+      // SOCIAL MEDIA
+      socialMedia: [
+        {
+          link: "https://www.facebook.com",
+          iconClass: "fab fa-facebook-f",
+        },
+        {
+          link: "https://www.twitter.com",
+          iconClass: "fab fa-twitter",
+        },
+        {
+          link: "https://www.linkedin.com",
+          iconClass: "fab fa-linkedin-in",
         },
       ],
       // HEADER NAV
@@ -99,7 +119,7 @@ export default {
           text: "lorem ipsum dolor bla bla bla lorem ipsum dolor bla bla bla",
         },
       ],
-      //COMPANY SECTION
+      // COMPANY SECTION
       aboutItems: [
         {
           iconClass: "fas fa-medal",
@@ -122,8 +142,8 @@ export default {
           text: "Lorem ipsum dolor bla bla bla bla",
         },
       ],
-      //PROJECTS SECTION
-      //PROJECTS NAV
+      // PROJECTS SECTION
+      // PROJECTS NAV
       projectsNavItems: [
         {
           name: "all",
@@ -154,7 +174,7 @@ export default {
           active: false,
         },
       ],
-      //PROJECTS CARDS
+      // PROJECTS CARDS
       projects: [
         {
           imgUrlId: "1",
@@ -189,6 +209,7 @@ export default {
       ],
 
       results: [
+        // COMPANY NUMBERS
         {
           category: "certifications",
           amount: 128,
@@ -207,6 +228,7 @@ export default {
         },
       ],
 
+      // TECHNOLOGIES
       logos: [
         {
           imgUrlId: "4",
@@ -230,10 +252,12 @@ export default {
         },
       ],
 
+      // FOOTER
+      // FOOTER ABOUT
       footerLinks: [
         {
           name: "about",
-          contentList: [
+          linksList: [
             {
               title: "the company",
               href: "",
@@ -260,10 +284,10 @@ export default {
             },
           ],
         },
-
+        // FOOTER SERVICES
         {
           name: "services",
-          contentList: [
+          linksList: [
             {
               title: "audit & assurance",
               href: "",
@@ -290,10 +314,10 @@ export default {
             },
           ],
         },
-
+        // FOOTER SUPPORT
         {
           name: "support",
-          contentList: [
+          linksList: [
             {
               title: "responsability",
               href: "",

@@ -27,6 +27,7 @@ export default {
 .proj-card {
   position: relative;
   width: 33%;
+  cursor: pointer;
 
   & * {
     transition: 200ms;
